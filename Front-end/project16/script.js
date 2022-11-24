@@ -25,23 +25,73 @@ let products = [
 
 form.addEventListener("submit", function(event) {
     event.preventDefault()
-    console.log(productName.value)
-    console.log(productPrice.value)
+    // console.log(productName.value)
+    // console.log(productPrice.value)
+    let newProduct = {
+        name: productName.value,
+        price: Number(productPrice.value)
+    }
+    // console.log(newProduct)
+    products.push(newProduct)
+    // console.log(products)
+    renderProducts(products)
+    onHover()
+    deleteProduct()
+
+    clearInputs()   
 })
 
+function clearInputs() {
+    productName.value = ''
+    productPrice.value = ''
+}
 
 
 function renderProducts(arr) {
+    productsWrapper.innerHTML = ''
     arr.forEach(function(element) {
         productsWrapper.innerHTML += 
         ` <div class="product">
             <p class="product-name">${element.name}</p>
             <p class="product-price">${element.price}</p>
+            <button class="delete-btn">X</button>
         </div>`
     })
 }
 renderProducts(products)
 
 
+function onHover() {
+    let product = document.querySelectorAll(".product")
+    product.forEach(function(element) {
+        element.addEventListener("mouseover", function() {
+            element.querySelector(".delete-btn").style.display = "block"
+        })
+        element.addEventListener("mouseout", function() {
+            element.querySelector(".delete-btn").style.display = "none"
+        })
+    })
+}
+onHover()
+
+// function offHover() {
+//     let product = document.querySelectorAll(".product")
+//     product.forEach(function(element) {
+//         element.addEventListener("mouseout", function() {
+//             element.querySelector(".delete-btn").style.display = "none"
+//         })
+//     })
+// }
+// offHover()
+
+function deleteProduct() {
+    let deleteBtns = document.querySelectorAll(".delete-btn")
+    deleteBtns.forEach(function(btn) {
+             btn.addEventListener("click", function() {
+             btn.parentElement.remove()
+        })
+    })
+}
+deleteProduct()
 
 
