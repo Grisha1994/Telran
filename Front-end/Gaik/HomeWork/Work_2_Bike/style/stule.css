@@ -231,6 +231,27 @@ h3{
     gap: 250px;   
 }
 
+
+.teachers .teachers_wrapper img{
+    height: 190px;
+    width: 190px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    
+}
+
+.teachers .teachers_wrapper .img .foto_1{
+    background-image: url(../media/22\(1\).jpeg);
+}
+.teachers .teachers_wrapper .img .foto_2{
+    background-image: url(../media/Ellipse_1.png);
+}
+.teachers .teachers_wrapper .img .foto_3{
+    background-image: url(../media/Ellipse_2.png);
+}
+
+
 .teachers .wrapper button{
     color: #FFFFFF;
     border: 2px solid #FFFFFF;
