@@ -729,13 +729,13 @@
 //     и возвращает массив чисел от 0 до этого числа
 
 
-// function num(a, b) {
-//     if(a > b) {
-//         return console.log(a)
-//     }
-//     console.log(b)
-// }
-// num(32, 20)
+function num(a, b) {
+    if(a > b) {
+        return console.log(a)
+    }
+    console.log(b)
+}
+num(32, 20)
 
 
 

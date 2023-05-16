@@ -157,6 +157,8 @@ h2{
     background-image: url(../media/Rectangle.png);
     color: white;
     padding: 122px 0 140px 0;
+    background-position: center;
+    background-size: cover;
 }
 
 #contacts a {
@@ -254,6 +256,7 @@ h2{
     display: block;
     cursor: pointer;
     font-size: 40px;
+    
    }
 
    nav ul{
@@ -277,6 +280,19 @@ h2{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+#contacts .wrapper{
+    flex-direction: column;
+    gap: 100px;
+}
+
+#contacts form textarea{
+    width: 600px;
+}
+
+#contacts .wrapper div > p{
+    width: 100%;
 }
 
 }

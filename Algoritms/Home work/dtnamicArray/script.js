@@ -144,7 +144,7 @@ class DynamicArray {
 
 
     function countLetters(str) {
-        const letterCount = [];
+        const letterCount = {};
         for (let i = 0; i < str.length; i++) {
           if (letterCount[str[i]]) {
             letterCount[str[i]]++;
@@ -156,8 +156,10 @@ class DynamicArray {
       }
       
       const str = "абракадабра";
-      const letterCounts = countLetters(str);
-      for (const letter in letterCounts) {
-        console.log(`${letter}: ${letterCounts[letter]}`);
-      }
-    
+      
+      // const letterCounts = countLetters(str);
+      // for (const letter in letterCounts) {
+      //   console.log(`${letter}: ${letterCounts[letter]}`);
+      // }
+
+    console.log(countLetters(str));
